@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+This site visualizes and disseminates data from [Roy, Frank, Decamp, Miller, & Roy (2015), PNAS](https://www.pnas.org/doi/10.1073/pnas.1419773112).
+
+The website is based on a Shiny app originally made for the publication by [Mike Frank](http://web.stanford.edu/~mcfrank). This demo showcases the use of Observable for client-side visualizations.

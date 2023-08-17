@@ -1,0 +1,92 @@
+---
+title: "Explore word learning in one child's vocabulary "
+execute:
+  echo: false
+---
+
+Our analysis explores the words a single child had produced by age two, displayed by their age of first production (AoFP). The interactive visualation allows users to explore regression models predicting AoFP on the basis of different aspects of the child's language input. See Main Text and Supplemental Information of [Roy et al. (2015)](https://www.pnas.org/doi/10.1073/pnas.1419773112) for more information about models and variable coding.
+
+```{ojs}
+redivis = require("redivis@0.3.3")  
+<!-- ML = require('ml@5.0.0/dist/ml.js') -->
+ML = require("https://www.lactame.com/lib/ml/6.0.0/ml.min.js")
+<!-- import {MLR} from "ml-regression-multivariate-linear" -->
+import {interval} from "@mootari/range-slider@1786"
+d3 = require("d3-array@2")
+```
+
+```{ojs}
+
+data = {
+  await redivis.authorize({apiToken: "AAAB2SjUBXVq08b7x9S4IGZpSshTMYTr"});
+  return await redivis
+  .user('imathews')
+  .dataset('word_birth_browser_data')
+  .table('words')
+  .listRows()
+}
+```
+
+```{ojs}
+//| panel: sidebar
+
+viewof vars = Inputs.checkbox(Object.keys(data[0]).slice(4,14), 
+{label: "Predictors", value: ["s_cmu_phon","sln_freq_pre","s_uttlen_pre"]})
+
+```
+
+
+```{ojs}
+function toMatrix(arr, width) {
+  return arr.reduce(function (rows, key, index) { 
+    return (index % width == 0 ? rows.push([key]) 
+      : rows[rows.length-1].push(key)) && rows;
+  }, []);
+}
+
+function addColumn(tableData, newColumnName, newColumnFunction) {
+  return tableData.map(row => {
+    let returnObject = row;
+    returnObject[newColumnName] = newColumnFunction(row)
+    return returnObject
+  })
+}
+
+aoa = toMatrix(data.map(a => a.aoa), 1)
+xs = data.map(d => vars.map(k => d[k]))
+mlr = new ML.MultivariateLinearRegression(xs, aoa)
+preds = mlr.predict(xs)
+```
+
+```{ojs}
+with_pred = {
+  return data.map((x, i) => Object.assign(x, preds[i]));
+}
+```
+
+```{ojs}
+Plot.plot({
+  x: {
+    label: "Model prediction", 
+    domain: [10, 24]
+  },
+  y: {label: "Age of First Production (months)"},
+  color: {legend: true},
+  marks: 
+    [
+      Plot.dot(with_pred,
+      {
+        x: "0", 
+        y: "aoa", 
+        stroke: "small_cat",
+        tip: true
+      }),
+      Plot.linearRegressionY(data,
+      {
+        x: "0",
+        y: "aoa",
+        stroke: "red"
+      })
+    ]
+})
+```

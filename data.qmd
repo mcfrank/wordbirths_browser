@@ -1,0 +1,53 @@
+---
+title: "Dataset"
+execute:
+  echo: false
+---
+
+The summary dataset for this website is a single CSV, with each row representing a single word in the child's vocabulary from age 9 - 25 months. Included is a variety of meta-data about the word including when it was first produced (column 'aoa').
+
+```{ojs}
+redivis = require("redivis@0.3.3")  
+```
+```{ojs}
+<!-- from https://observablehq.com/@jeremiak/download-data-button -->
+
+button = (data, filename = 'roy_2015_data.csv') => {
+  if (!data) throw new Error('Array of data required as first argument');
+
+  let downloadData;
+  if (filename.includes('.csv')) {
+    downloadData = new Blob([d3.csvFormat(data)], { type: "text/csv" });
+  } else {
+    downloadData = new Blob([JSON.stringify(data, null, 2)], {
+      type: "application/json"
+    });
+  }
+
+  const size = (downloadData.size / 1024).toFixed(0);
+  const button = DOM.download(
+    downloadData,
+    filename,
+    `Download ${filename} (~${size} KB)`
+  );
+  return button;
+}
+
+button(data)
+```
+
+```{ojs}
+
+data = {
+  await redivis.authorize({apiToken: "AAAB2SjUBXVq08b7x9S4IGZpSshTMYTr"});
+  return await redivis
+  .user('imathews')
+  .dataset('word_birth_browser_data')
+  .table('words')
+  .listRows()
+}
+```
+
+```{ojs}
+table = Inputs.table(data)
+```
