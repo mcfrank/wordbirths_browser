@@ -8,11 +8,7 @@ Our analysis explores the words a single child had produced by age two, displaye
 
 ```{ojs}
 redivis = require("redivis@0.3.3")  
-<!-- ML = require('ml@5.0.0/dist/ml.js') -->
 ML = require("https://www.lactame.com/lib/ml/6.0.0/ml.min.js")
-<!-- import {MLR} from "ml-regression-multivariate-linear" -->
-import {interval} from "@mootari/range-slider@1786"
-d3 = require("d3-array@2")
 ```
 
 ```{ojs}
@@ -34,7 +30,6 @@ viewof vars = Inputs.checkbox(Object.keys(data[0]).slice(4,14),
 {label: "Predictors", value: ["s_cmu_phon","sln_freq_pre","s_uttlen_pre"]})
 
 ```
-
 
 ```{ojs}
 function toMatrix(arr, width) {

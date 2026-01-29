@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Word Birth Browser - Explore word learning in one child’s vocabulary</title>
+<title>Explore word learning in one child’s vocabulary – Word Birth Browser</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,9 +17,11 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -46,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -93,22 +65,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -117,8 +97,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
@@ -128,37 +110,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Word Birth Browser</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html">
- <span class="menu-text">Data</span></a>
+    <a class="nav-link" href="./data.html"> 
+<span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -166,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -187,16 +173,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
   
 
+
 </header>
+
 
 <p>Our analysis explores the words a single child had produced by age two, displayed by their age of first production (AoFP). The interactive visualation allows users to explore regression models predicting AoFP on the basis of different aspects of the child’s language input. See Main Text and Supplemental Information of <a href="https://www.pnas.org/doi/10.1073/pnas.1419773112">Roy et al.&nbsp;(2015)</a> for more information about models and variable coding.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="10" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 9;"><span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>redivis <span class="op">=</span> <span class="pp">require</span>(<span class="st">"redivis@0.3.3"</span>)  </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!--</span> ML <span class="op">=</span> <span class="pp">require</span>(<span class="st">'ml@5.0.0/dist/ml.js'</span>) <span class="op">--&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ML <span class="op">=</span> <span class="pp">require</span>(<span class="st">"https://www.lactame.com/lib/ml/6.0.0/ml.min.js"</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!--</span> <span class="im">import</span> {MLR} <span class="im">from</span> <span class="st">"ml-regression-multivariate-linear"</span> <span class="op">--&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {interval} <span class="im">from</span> <span class="st">"@mootari/range-slider@1786"</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3-array@2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="10" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 9;"><span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>redivis <span class="op">=</span> <span class="pp">require</span>(<span class="st">"redivis@0.3.3"</span>)  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ML <span class="op">=</span> <span class="pp">require</span>(<span class="st">"https://www.lactame.com/lib/ml/6.0.0/ml.min.js"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -211,30 +195,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-4" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="18" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 17;"><span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> redivis<span class="op">.</span><span class="fu">authorize</span>({<span class="dt">apiToken</span><span class="op">:</span> <span class="st">"AAAB2SjUBXVq08b7x9S4IGZpSshTMYTr"</span>})<span class="op">;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="cf">await</span> redivis</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">user</span>(<span class="st">'imathews'</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">dataset</span>(<span class="st">'word_birth_browser_data'</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">table</span>(<span class="st">'words'</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">listRows</span>()</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="14" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 13;"><span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> redivis<span class="op">.</span><span class="fu">authorize</span>({<span class="dt">apiToken</span><span class="op">:</span> <span class="st">"AAAB2SjUBXVq08b7x9S4IGZpSshTMYTr"</span>})<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="cf">await</span> redivis</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">user</span>(<span class="st">'imathews'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">dataset</span>(<span class="st">'word_birth_browser_data'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">table</span>(<span class="st">'words'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">listRows</span>()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="declaration">
 
@@ -242,8 +212,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell card bg-light p-2 g-col-24 g-col-lg-7">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="31" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 30;"><span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>viewof vars <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(<span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(data[<span class="dv">0</span>])<span class="op">.</span><span class="fu">slice</span>(<span class="dv">4</span><span class="op">,</span><span class="dv">14</span>)<span class="op">,</span> </span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>{<span class="dt">label</span><span class="op">:</span> <span class="st">"Predictors"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> [<span class="st">"s_cmu_phon"</span><span class="op">,</span><span class="st">"sln_freq_pre"</span><span class="op">,</span><span class="st">"s_uttlen_pre"</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="27" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 26;"><span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>viewof vars <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(<span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(data[<span class="dv">0</span>])<span class="op">.</span><span class="fu">slice</span>(<span class="dv">4</span><span class="op">,</span><span class="dv">14</span>)<span class="op">,</span> </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>{<span class="dt">label</span><span class="op">:</span> <span class="st">"Predictors"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> [<span class="st">"s_cmu_phon"</span><span class="op">,</span><span class="st">"sln_freq_pre"</span><span class="op">,</span><span class="st">"s_uttlen_pre"</span>]})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -251,25 +221,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="40" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 39;"><span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">toMatrix</span>(arr<span class="op">,</span> width) {</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> arr<span class="op">.</span><span class="fu">reduce</span>(<span class="kw">function</span> (rows<span class="op">,</span> key<span class="op">,</span> index) { </span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (index <span class="op">%</span> width <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span> rows<span class="op">.</span><span class="fu">push</span>([key]) </span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>      <span class="op">:</span> rows[rows<span class="op">.</span><span class="at">length</span><span class="op">-</span><span class="dv">1</span>]<span class="op">.</span><span class="fu">push</span>(key)) <span class="op">&amp;&amp;</span> rows<span class="op">;</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> [])<span class="op">;</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">addColumn</span>(tableData<span class="op">,</span> newColumnName<span class="op">,</span> newColumnFunction) {</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> tableData<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> {</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> returnObject <span class="op">=</span> row<span class="op">;</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    returnObject[newColumnName] <span class="op">=</span> <span class="fu">newColumnFunction</span>(row)</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> returnObject</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>aoa <span class="op">=</span> <span class="fu">toMatrix</span>(data<span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">aoa</span>)<span class="op">,</span> <span class="dv">1</span>)</span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> vars<span class="op">.</span><span class="fu">map</span>(k <span class="kw">=&gt;</span> d[k]))</span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>mlr <span class="op">=</span> <span class="kw">new</span> ML<span class="op">.</span><span class="fu">MultivariateLinearRegression</span>(xs<span class="op">,</span> aoa)</span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> mlr<span class="op">.</span><span class="fu">predict</span>(xs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="35" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 34;"><span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">toMatrix</span>(arr<span class="op">,</span> width) {</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> arr<span class="op">.</span><span class="fu">reduce</span>(<span class="kw">function</span> (rows<span class="op">,</span> key<span class="op">,</span> index) { </span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (index <span class="op">%</span> width <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span> rows<span class="op">.</span><span class="fu">push</span>([key]) </span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>      <span class="op">:</span> rows[rows<span class="op">.</span><span class="at">length</span><span class="op">-</span><span class="dv">1</span>]<span class="op">.</span><span class="fu">push</span>(key)) <span class="op">&amp;&amp;</span> rows<span class="op">;</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> [])<span class="op">;</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">addColumn</span>(tableData<span class="op">,</span> newColumnName<span class="op">,</span> newColumnFunction) {</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> tableData<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> {</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> returnObject <span class="op">=</span> row<span class="op">;</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    returnObject[newColumnName] <span class="op">=</span> <span class="fu">newColumnFunction</span>(row)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> returnObject</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>aoa <span class="op">=</span> <span class="fu">toMatrix</span>(data<span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">aoa</span>)<span class="op">,</span> <span class="dv">1</span>)</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> vars<span class="op">.</span><span class="fu">map</span>(k <span class="kw">=&gt;</span> d[k]))</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>mlr <span class="op">=</span> <span class="kw">new</span> ML<span class="op">.</span><span class="fu">MultivariateLinearRegression</span>(xs<span class="op">,</span> aoa)</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> mlr<span class="op">.</span><span class="fu">predict</span>(xs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -314,9 +284,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="61" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>with_pred <span class="op">=</span> {</span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(x<span class="op">,</span> preds[i]))<span class="op">;</span></span>
-<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="56" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>with_pred <span class="op">=</span> {</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(x<span class="op">,</span> preds[i]))<span class="op">;</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="declaration">
 
@@ -324,30 +294,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="67" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 66;"><span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Model prediction"</span><span class="op">,</span> </span>
-<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">10</span><span class="op">,</span> <span class="dv">24</span>]</span>
-<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Age of First Production (months)"</span>}<span class="op">,</span></span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> </span>
-<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">dot</span>(with_pred<span class="op">,</span></span>
-<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>      {</span>
-<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> </span>
-<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"aoa"</span><span class="op">,</span> </span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"small_cat"</span><span class="op">,</span></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>      })<span class="op">,</span></span>
-<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(data<span class="op">,</span></span>
-<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>      {</span>
-<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span></span>
-<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"aoa"</span><span class="op">,</span></span>
-<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"red"</span></span>
-<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>      })</span>
-<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="62" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 61;"><span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Model prediction"</span><span class="op">,</span> </span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">10</span><span class="op">,</span> <span class="dv">24</span>]</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Age of First Production (months)"</span>}<span class="op">,</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> </span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">dot</span>(with_pred<span class="op">,</span></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>      {</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> </span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"aoa"</span><span class="op">,</span> </span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"small_cat"</span><span class="op">,</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>      })<span class="op">,</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(data<span class="op">,</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>      {</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"aoa"</span><span class="op">,</span></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"red"</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>      })</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="expression">
 
@@ -358,11 +328,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 </main> <!-- /main -->
-
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"redivis = require(\"redivis@0.3.3\")  \n<!-- ML = require('ml@5.0.0/dist/ml.js') -->\nML = require(\"https://www.lactame.com/lib/ml/6.0.0/ml.min.js\")\n<!-- import {MLR} from \"ml-regression-multivariate-linear\" -->\nimport {interval} from \"@mootari/range-slider@1786\"\nd3 = require(\"d3-array@2\")\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"\ndata = {\n  await redivis.authorize({apiToken: \"AAAB2SjUBXVq08b7x9S4IGZpSshTMYTr\"});\n  return await redivis\n  .user('imathews')\n  .dataset('word_birth_browser_data')\n  .table('words')\n  .listRows()\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"\nviewof vars = Inputs.checkbox(Object.keys(data[0]).slice(4,14), \n{label: \"Predictors\", value: [\"s_cmu_phon\",\"sln_freq_pre\",\"s_uttlen_pre\"]})\n\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"function toMatrix(arr, width) {\n  return arr.reduce(function (rows, key, index) { \n    return (index % width == 0 ? rows.push([key]) \n      : rows[rows.length-1].push(key)) && rows;\n  }, []);\n}\n\nfunction addColumn(tableData, newColumnName, newColumnFunction) {\n  return tableData.map(row => {\n    let returnObject = row;\n    returnObject[newColumnName] = newColumnFunction(row)\n    return returnObject\n  })\n}\n\naoa = toMatrix(data.map(a => a.aoa), 1)\nxs = data.map(d => vars.map(k => d[k]))\nmlr = new ML.MultivariateLinearRegression(xs, aoa)\npreds = mlr.predict(xs)\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"with_pred = {\n  return data.map((x, i) => Object.assign(x, preds[i]));\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"Plot.plot({\n  x: {\n    label: \"Model prediction\", \n    domain: [10, 24]\n  },\n  y: {label: \"Age of First Production (months)\"},\n  color: {legend: true},\n  marks: \n    [\n      Plot.dot(with_pred,\n      {\n        x: \"0\", \n        y: \"aoa\", \n        stroke: \"small_cat\",\n        tip: true\n      }),\n      Plot.linearRegressionY(data,\n      {\n        x: \"0\",\n        y: \"aoa\",\n        stroke: \"red\"\n      })\n    ]\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('vars')"}]}
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJlZGl2aXMgPSByZXF1aXJlKFwicmVkaXZpc0AwLjMuM1wiKSAgXG5NTCA9IHJlcXVpcmUoXCJodHRwczovL3d3dy5sYWN0YW1lLmNvbS9saWIvbWwvNi4wLjAvbWwubWluLmpzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmRhdGEgPSB7XG4gIGF3YWl0IHJlZGl2aXMuYXV0aG9yaXplKHthcGlUb2tlbjogXCJBQUFCMlNqVUJYVnEwOGI3eDlTNElHWnBTc2hUTVlUclwifSk7XG4gIHJldHVybiBhd2FpdCByZWRpdmlzXG4gIC51c2VyKCdpbWF0aGV3cycpXG4gIC5kYXRhc2V0KCd3b3JkX2JpcnRoX2Jyb3dzZXJfZGF0YScpXG4gIC50YWJsZSgnd29yZHMnKVxuICAubGlzdFJvd3MoKVxufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG52aWV3b2YgdmFycyA9IElucHV0cy5jaGVja2JveChPYmplY3Qua2V5cyhkYXRhWzBdKS5zbGljZSg0LDE0KSwgXG57bGFiZWw6IFwiUHJlZGljdG9yc1wiLCB2YWx1ZTogW1wic19jbXVfcGhvblwiLFwic2xuX2ZyZXFfcHJlXCIsXCJzX3V0dGxlbl9wcmVcIl19KVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJmdW5jdGlvbiB0b01hdHJpeChhcnIsIHdpZHRoKSB7XG4gIHJldHVybiBhcnIucmVkdWNlKGZ1bmN0aW9uIChyb3dzLCBrZXksIGluZGV4KSB7IFxuICAgIHJldHVybiAoaW5kZXggJSB3aWR0aCA9PSAwID8gcm93cy5wdXNoKFtrZXldKSBcbiAgICAgIDogcm93c1tyb3dzLmxlbmd0aC0xXS5wdXNoKGtleSkpICYmIHJvd3M7XG4gIH0sIFtdKTtcbn1cblxuZnVuY3Rpb24gYWRkQ29sdW1uKHRhYmxlRGF0YSwgbmV3Q29sdW1uTmFtZSwgbmV3Q29sdW1uRnVuY3Rpb24pIHtcbiAgcmV0dXJuIHRhYmxlRGF0YS5tYXAocm93ID0+IHtcbiAgICBsZXQgcmV0dXJuT2JqZWN0ID0gcm93O1xuICAgIHJldHVybk9iamVjdFtuZXdDb2x1bW5OYW1lXSA9IG5ld0NvbHVtbkZ1bmN0aW9uKHJvdylcbiAgICByZXR1cm4gcmV0dXJuT2JqZWN0XG4gIH0pXG59XG5cbmFvYSA9IHRvTWF0cml4KGRhdGEubWFwKGEgPT4gYS5hb2EpLCAxKVxueHMgPSBkYXRhLm1hcChkID0+IHZhcnMubWFwKGsgPT4gZFtrXSkpXG5tbHIgPSBuZXcgTUwuTXVsdGl2YXJpYXRlTGluZWFyUmVncmVzc2lvbih4cywgYW9hKVxucHJlZHMgPSBtbHIucHJlZGljdCh4cylcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IndpdGhfcHJlZCA9IHtcbiAgcmV0dXJuIGRhdGEubWFwKCh4LCBpKSA9PiBPYmplY3QuYXNzaWduKHgsIHByZWRzW2ldKSk7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICB4OiB7XG4gICAgbGFiZWw6IFwiTW9kZWwgcHJlZGljdGlvblwiLCBcbiAgICBkb21haW46IFsxMCwgMjRdXG4gIH0sXG4gIHk6IHtsYWJlbDogXCJBZ2Ugb2YgRmlyc3QgUHJvZHVjdGlvbiAobW9udGhzKVwifSxcbiAgY29sb3I6IHtsZWdlbmQ6IHRydWV9LFxuICBtYXJrczogXG4gICAgW1xuICAgICAgUGxvdC5kb3Qod2l0aF9wcmVkLFxuICAgICAge1xuICAgICAgICB4OiBcIjBcIiwgXG4gICAgICAgIHk6IFwiYW9hXCIsIFxuICAgICAgICBzdHJva2U6IFwic21hbGxfY2F0XCIsXG4gICAgICAgIHRpcDogdHJ1ZVxuICAgICAgfSksXG4gICAgICBQbG90LmxpbmVhclJlZ3Jlc3Npb25ZKGRhdGEsXG4gICAgICB7XG4gICAgICAgIHg6IFwiMFwiLFxuICAgICAgICB5OiBcImFvYVwiLFxuICAgICAgICBzdHJva2U6IFwicmVkXCJcbiAgICAgIH0pXG4gICAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndmFycycpIn1dfQ==
 </script>
 <script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
 window._ojs.paths.runtimeToDoc = "../..";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "";
@@ -370,139 +340,407 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
-    } else {
-      return undefined;
+      return false;
     }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
       });
     }
-  }
-});
-</script>
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
+
 
 
 
